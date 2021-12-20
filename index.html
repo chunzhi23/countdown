@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="shortcut icon" href="/favicon.ico">
     <title>Countdown</title>
+    <script src="/js/cookie.js"></script>
 </head>
 <body>
-    
+    <div id="container">
+        <h1>CountDown</h1>
+        <div id="timer">
+            <div class="items">
+                <span id="days" class="digit">0</span>
+                <span class="txt">DAYS</span>
+            </div>
+            <div class="items">
+                <span id="hours" class="digit">00</span>
+                <span class="txt">HOURS</span>
+            </div>
+            <div class="items">
+                <span id="mins" class="digit">00</span>
+                <span class="txt">MINUTES</span>
+            </div>
+            <div class="items">
+                <span id="secs" class="digit">00</span>
+                <span class="txt">SECONDS</span>
+            </div>
+        </div>
+        <div id="add">
+            <div id="addBtn">
+                <i class="material-icons md-48">refresh</i>
+            </div>
+            <div id="settings" class="hidden">
+                <div class="form">
+                    <label for="date">Date:</label>
+                    <input id="date" type="date">
+                </div>
+                <div class="form">
+                    <label for="time">Time: </label>
+                    <input id="time" type="time">
+                </div>
+                <div class="form">
+                    <label for="gmt">GMT:</label>
+                    <input id="gmt" type="number">
+                </div>
+                <div class="form">
+                    <input id="submit" type="button" value="OK">
+                </div>
+            </div>
+        </div>
+        <script src="/js/setup.js"></script>
+        <script src="/js/addCount.js"></script>
+    </div>
 </body>
 </html>

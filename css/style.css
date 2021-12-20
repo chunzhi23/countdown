@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: #262a2d;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 80px;
+    color: white;   
+}
+
+span {
+    font-size: 20px;
+}
+
+.hidden {visibility: hidden;}
+
+#container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#timer {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+#timer .items {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#timer .items .digit {
+    font-size: 50px;
+}
+#timer .items:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+#add {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#addBtn {
+    margin-top: 20px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+#settings {margin-top: 20px;}
+#settings .form {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+#settings .form label {
+    margin-right: 10px;
+    width: 40px;
+    display: inline-block;
+    font-size: 24px;
+    text-align: right;
+    color: white;
+}
+#settings .form input:not([type="button"]) {
+    padding: 1px 2px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    width: 160px;
+    line-height: 24px;
+    font-size: 16px;
+    outline: none;
+}
+#settings .form input[type="button"] {
+    padding: 1px 2px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    width: 40px;
+    line-height: 24px;
+}
