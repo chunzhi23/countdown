@@ -15,16 +15,20 @@ if (getCookie("timestamp")){
         var diff = target.getTime() - date.getTime();
         var parse_diff = diff / (24 * 60 * 60 * 1000);
 
-        days.innerHTML = Math.floor(parse_diff);
+        var day = Math.floor(parse_diff);
+        days.innerHTML = day < 0 ? '+'+ Math.abs(day) : day;
         parse_diff = parse_diff%1*24;
         
-        hours.innerHTML = ('0'+ (Math.floor(parse_diff))).slice(-2);
+        var hour = Math.floor(parse_diff)
+        hours.innerHTML = ('0'+ (Math.abs(hour))).slice(-2);
         parse_diff = parse_diff%1*60;
         
-        mins.innerHTML = ('0'+ Math.floor(parse_diff)).slice(-2);
+        var min = Math.floor(parse_diff)
+        mins.innerHTML = ('0'+ Math.abs(min)).slice(-2);
         parse_diff = parse_diff%1*60;
         
-        secs.innerHTML = ('0'+ Math.floor(parse_diff)).slice(-2);
+        var sec = Math.floor(parse_diff)
+        secs.innerHTML = ('0'+ Math.abs(sec)).slice(-2);
     }, 1000);
 } else {
     
