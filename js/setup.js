@@ -10,7 +10,7 @@ if (getCookie("timestamp")){
     let interval = setInterval(() => {
         let date = new Date();
         let target = new Date(timestamp * 1000)
-        target.setHours(date.getHours() + GMT-3);
+        target.setHours(target.getHours() + GMT);
 
         var diff = target.getTime() - date.getTime();
         var parse_diff = diff / (24 * 60 * 60 * 1000);
